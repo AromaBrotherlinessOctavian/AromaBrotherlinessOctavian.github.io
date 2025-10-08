@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/header.min.css">
+    <link rel="stylesheet" href="../styles/sidebar.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+    <script src="../scripts/nav.min.js"></script>
+    <link rel="icon" href="../images/favicon.svg">
+    <title>Примеры Web-API</title>
+</head>
+
+<body>
+    <header id="header-container">
+        <div id="header-content">
+            <div id="header-toggle-sidebar-bg">
+                <img id="header-toggle-sidebar-btn" class="hidden" src="../images/menu-icon.svg" alt="sidebar icon"
+                    title="Toggle sidebar">
+            </div>
+            <span id="header-site-brand">Использование API сервисов при разработке сайтов</span>
+            <img id="header-site-logo" src="../images/favicon.svg" alt="site icon" title="Site icon">
+        </div>
+        <div id="header-breadcrumbs">
+            <div class="header-nav-breadcrumbs-list">
+                <a class="header-nav-link" href="./index.html">...</a>
+                <img src="../images/chevron-right.svg" alt=">" title="Divider" class="header-nav-divider-img">
+                <a class="header-nav-link" href="./index.html">...</a>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar-blur" class="hidden"></div>
+    <aside id="sidebar-container" class="hidden" data-hidden="">
+        <div id="sidebar-content">
+            <div id="sidebar-nav-list">
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg active">
+                            <a class="sidebar-nav-link active" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg">
+                            <a class="sidebar-nav-link" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div id="body-content">
+        <main id="main-content">
+            <h1 class="title">Какие бывают Web-API</h1>
+            <div class="after-title-content">
+                <section class="text-section">
+                    <h2 class="heading">Примеры Web-API по категориям</h2>
+                    <ul class="auto-end-markers">
+                        <li>
+                            <span class="list-item-title">GeoIP</span>
+                            <span class="list-item-explanation">определение страны/города посетителей сайта по
+                                айпи-адресу</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 500px;">
+                            <img loading="lazy" src="../images/example-geoip.webp" title="GeoIP API" alt="GeoIP API">
+                        </div>
+                        <li>
+                            <span class="list-item-title">Maps</span>
+                            <span class="list-item-explanation">интеграция с Google Maps и др. - например
+                                для интерактивного показа расположений филиалов организации в городе</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 300px;">
+                            <img loading="lazy" src="../images/example-maps.webp" title="Карты" alt="Maps API">
+                        </div>
+                        <li>
+                            <span class="list-item-title">Authentication</span>
+                            <span class="list-item-explanation">аутентификация через сторонних провайдеров
+                                (через аккаунты Google, ВК и т.д.)</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 300px;">
+                            <img loading="lazy" src="../images/example-auth.webp" title="Аутентификация" alt="Auth API">
+                        </div>
+                        <li>
+                            <span class="list-item-title">Payment</span>
+                            <span class="list-item-explanation">интеграция с платёжными системами</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Social Media Integration</span>
+                            <span class="list-item-explanation">интеграция с социальными сетями
+                                (например, комментарии на сайтах через Disqus)</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Ads</span>
+                            <span class="list-item-explanation">рекламная интеграция</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 300px;">
+                            <img loading="lazy" src="../images/example-ads.webp" title="Рекламная интеграция" alt="Ads API">
+                        </div>
+                        <li>
+                            <span class="list-item-title">Weather</span>
+                            <span class="list-item-explanation">получение данных о погоде</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">AI</span>
+                            <span class="list-item-explanation">интеграция с искусственным интеллектом</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Translation</span>
+                            <span class="list-item-explanation">перевод текста на разные языки</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 500px;">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="../images/example-translate.webp">
+                                <img loading="lazy" src="../images/example-translate-tiny.webp" title="Виджет для перевода от Google"
+                                    alt="Google translate widget">
+                            </picture>
+                        </div>
+                        <li>
+                            <span class="list-item-title">SMS</span>
+                            <span class="list-item-explanation">отправка SMS сообщений и т.д.</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Captcha</span>
+                            <span class="list-item-explanation">защита от ботов</span>
+                        </li>
+                        <div class="img-clamp-width" style="max-width: 300px;">
+                            <img loading="lazy" src="../images/example-captcha.webp" title="Капча" alt="Captcha">
+                        </div>
+                        <li>
+                            <span class="list-item-title">И другие</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer id="footer-content">
+            <span>Тема 10. Использование API сервисов при разработке сайтов</span>
+            <span>webmaster@localhost</span>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/header.min.css">
+    <link rel="stylesheet" href="../styles/sidebar.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+    <script src="../scripts/nav.min.js"></script>
+    <link rel="icon" href="../images/favicon.svg">
+    <title>REST</title>
+</head>
+
+<body>
+    <header id="header-container">
+        <div id="header-content">
+            <div id="header-toggle-sidebar-bg">
+                <img id="header-toggle-sidebar-btn" class="hidden" src="../images/menu-icon.svg" alt="sidebar icon"
+                    title="Toggle sidebar">
+            </div>
+            <span id="header-site-brand">Использование API сервисов при разработке сайтов</span>
+            <img id="header-site-logo" src="../images/favicon.svg" alt="site icon" title="Site icon">
+        </div>
+        <div id="header-breadcrumbs">
+            <div class="header-nav-breadcrumbs-list">
+                <a class="header-nav-link" href="./index.html">...</a>
+                <img src="../images/chevron-right.svg" alt=">" title="Divider" class="header-nav-divider-img">
+                <a class="header-nav-link" href="./index.html">...</a>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar-blur" class="hidden"></div>
+    <aside id="sidebar-container" class="hidden" data-hidden="">
+        <div id="sidebar-content">
+            <div id="sidebar-nav-list">
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg active">
+                            <a class="sidebar-nav-link active" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg">
+                            <a class="sidebar-nav-link" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div id="body-content">
+        <main id="main-content">
+            <h1 class="title">REST</h1>
+            <div class="after-title-content">
+                <section class="text-section">
+                    <h2 class="heading">REST архитектура</h2>
+                    <p class="normal-text">
+                        В последнее время, большинство Web-API использует архитектуру REST
+                        с представлением данных в виде <a href="../pages/json.html">JSON</a> документов.
+                    </p>
+                    <div class="image-with-explanation img-clamp-width">
+                        <img loading="lazy" src="../images/rest.webp" title="REST архитектура" alt="REST Diagram">
+                        <div class="explanation-text">
+                            <p class="normal-text">
+                                Пользователь делает запрос на получение ресурса, который идентифицируется URL,
+                                и получает информацию о ресурсе в виде JSON.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="normal-text">
+                        REST - это архитектурный стиль, в основе которого лежат принципы:
+                    </p>
+                    <ul class="auto-end-markers">
+                        <li>
+                            <span class="list-item-title">Однообразности интерфейса</span>
+                            <span class="list-item-explanation">вся API в целом имеет однородный стиль</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Архитектура Клиент-Сервер</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Отсутствие состояния</span>
+                            <span class="list-item-explanation">все нужные данные
+                                содержатся в сообщениях, и сервер ничего не "запоминает"</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Кеширование</span>
+                            <span class="list-item-explanation">клиент может кешировать представления ресурсов,
+                                когда это имеет смысл</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Многослойность</span>
+                            <span class="list-item-explanation">клиент общается только с API, а что стоит дальше за ней
+                                стоит, ему неизвестно и не интересно</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="text-section">
+                    <h2 class="heading">Оценка REST</h2>
+                    <table class="fixed pros-cons row-alternation">
+                        <thead>
+                            <tr>
+                                <th>Достоинства</th>
+                                <th>Недостатки</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Простота</td>
+                                <td>Отсутствие состояния - иногда имеет смысл хранить состояние на сервере,
+                                    а не постоянно таскать его с собой на клиенте</td>
+                            </tr>
+                            <tr>
+                                <td>Гибкость</td>
+                                <td>Иногда строгость и контроль лучше, чем гибкость</td>
+                            </tr>
+                            <tr>
+                                <td>Популярность</td>
+                                <td>Использование HTTP и архитектуры запрос-ответ
+                                    (иногда нужна прямая двухсторонняя коммуникация)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        <footer id="footer-content">
+            <span>Тема 10. Использование API сервисов при разработке сайтов</span>
+            <span>webmaster@localhost</span>
+        </footer>
+    </div>
+</body>
+
+</html>

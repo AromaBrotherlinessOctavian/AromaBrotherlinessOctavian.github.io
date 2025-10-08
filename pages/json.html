@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/header.min.css">
+    <link rel="stylesheet" href="../styles/sidebar.min.css">
+    <link rel="stylesheet" href="../styles/main.min.css">
+    <script src="../scripts/nav.min.js"></script>
+    <link rel="icon" href="../images/favicon.svg">
+    <title>JSON</title>
+</head>
+
+<body>
+    <header id="header-container">
+        <div id="header-content">
+            <div id="header-toggle-sidebar-bg">
+                <img id="header-toggle-sidebar-btn" class="hidden" src="../images/menu-icon.svg" alt="sidebar icon"
+                    title="Toggle sidebar">
+            </div>
+            <span id="header-site-brand">Использование API сервисов при разработке сайтов</span>
+            <img id="header-site-logo" src="../images/favicon.svg" alt="site icon" title="Site icon">
+        </div>
+        <div id="header-breadcrumbs">
+            <div class="header-nav-breadcrumbs-list">
+                <a class="header-nav-link" href="./index.html">...</a>
+                <img src="../images/chevron-right.svg" alt=">" title="Divider" class="header-nav-divider-img">
+                <a class="header-nav-link" href="./index.html">...</a>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar-blur" class="hidden"></div>
+    <aside id="sidebar-container" class="hidden" data-hidden="">
+        <div id="sidebar-content">
+            <div id="sidebar-nav-list">
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg active">
+                            <a class="sidebar-nav-link active" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-nav-item">
+                    <div class="sidebar-nav-link-container">
+                        <div class="sidebar-nav-link-with-bg">
+                            <a class="sidebar-nav-link" href="./index.html">...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div id="body-content">
+        <main id="main-content">
+            <h1 class="title">JSON</h1>
+            <div class="after-title-content">
+                <section class="text-section">
+                    <h2 class="heading">Синтаксис JSON (JavaScript Object Notation)</h2>
+                    <p class="normal-text">
+                        Определяется стандартом <a href="https://datatracker.ietf.org/doc/html/rfc8259">RFC 8259</a>
+                        (текущая версия). JSON-документы описывают JS-объекты. Комментариев в JSON не предусмотрено.
+                    </p>
+                    <p class="normal-text">
+                        На самом верхнем уровне, JSON-text'ы содержат некий JSON-value, которых всего несколько
+                        типов:
+                    </p>
+                    <ul class="auto-end-markers">
+                        <li>
+                            <span class="list-item-title">Null</span>
+                            <span class="list-item-explanation">литерал null, представляющий отсутствие объекта</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Булеаны</span>
+                            <span class="list-item-explanation">литералы true/false - да/нет</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Число</span>
+                            <span class="list-item-explanation">числовые литералы - дробные/целочисленные</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Строки</span>
+                            <span class="list-item-explanation">строчные литералы, содержащие Unicode символы</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Гетерогенные массивы</span>
+                            <span class="list-item-explanation">последовательности JSON-значений (не обязательно
+                                одинаковых типов), разделённые запятыми</span>
+                        </li>
+                        <li>
+                            <span class="list-item-title">Объекты</span>
+                            <span class="list-item-explanation">пары "ключ-значение" (где ключ - строка,
+                                а значение - любое JSON-value), разделённые запятыми</span>
+                        </li>
+                    </ul>
+                    <div class="image-with-explanation img-clamp-width"
+                        style="max-width: 550px;">
+                        <img loading="lazy" src="../images/json-value.webp" title="JSON-value" alt="JSON-value Diagram">
+                        <div class="explanation-text">
+                            <p class="normal-text">
+                                JSON-text = *пробел (string | number | object | array | true | false | null) *пробел
+                            </p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre>
+{
+    "Image": {
+        "Width":  800,
+        "Height": 600,
+        "Title":  "View from 15th Floor",
+        "Thumbnail": {
+            "Url":    "http://www.example.com/image/481989943",
+            "Height": 125,
+            "Width":  100
+        },
+        "Animated" : false,
+        "IDs": [116, 943, 234, 38793]
+    }
+}</pre>
+                    </div>
+                    <div class="code-explanation-text normal-text">
+                        <p class="normal-text">
+                            Пример JSON-документа: это объект, его поле Image является объектом, у него есть поля Width,
+                            Height, Title, Animated, Thumbnail(тоже объект с полями Url, Height, Width), IDs(массив
+                            чисел).
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer id="footer-content">
+            <span>Тема 10. Использование API сервисов при разработке сайтов</span>
+            <span>webmaster@localhost</span>
+        </footer>
+    </div>
+</body>
+
+</html>
