@@ -36,6 +36,14 @@
                 font-size: 0.5em;
             }
         }
+
+        .not-li {
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        .not-li::before {
+            content: "•";
+        }
     </style>
 </head>
 
@@ -87,31 +95,31 @@
             <div class="after-title-content">
                 <section class="text-section">
                     <h2 class="heading">Semantic UI</h2>
-                    <ul style="font-size: var(--normal-text-font-size);">
-                        <li>
+                    <div style="font-size: var(--normal-text-font-size);">
+                        <div class="not-li">
                             <span class="list-item-title">Button</span>
-                        </li>
+                        </div>
                         <button class="ui active button" onclick="alert(`click!`)" style="max-width: 200px;">One</button>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Checkbox</span>
-                        </li>
+                        </div>
                         <div class="ui checkbox">
                             <input type="checkbox" name="fun" tabindex="0" class="hidden">
                             <label>I enjoy having fun</label>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Toggle</span>
-                        </li>
+                        </div>
                         <div class="ui toggle checkbox">
                             <input type="checkbox" name="public" tabindex="0" class="hidden">
                             <label>Make my dog's profile public</label>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Input</span>
-                        </li>
+                        </div>
                         <div style="min-width: 0; max-width: 100%; overflow: auto;">
                             <div class="ui action left icon input">
                                 <i class="search icon"></i>
@@ -122,9 +130,9 @@
                             </div>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Card</span>
-                        </li>
+                        </div>
                         <div class="ui card">
                             <div class="blurring dimmable image">
                                 <div class="ui dimmer transition hidden">
@@ -135,7 +143,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img
+                                <img alt="card test image"
                                     src="data:image/webp;base64,UklGRvYBAABXRUJQVlA4IOoBAABwDACdASpAAEAAPp1Gn0ulo6KhqBgIqLATiWoA1AfWFHYwG2A8VX9M+wB5M3WX+gB0l/7lejv//7xoqdWgZKnucSztXo93WBKICDezVdn9hTzpv89biWrM/ZIaCkEkFqEuPz7AORrw/PcaNAAA/vxKUvp2L7Rypm2zyHvA93w7N2vQyPknxbHfSlPnHy0xznpMTDnZ/fg3Y6aBG0w97Z+LzM0jQKkded7/t8C45NWx3f/8mGP39rReNWP4mM8fTcX+TudOiQa1X+57QgPg01aayOwE8JDaP1WK0d5T5B0WsSB2Jnq41ro5a/EfHRWZmMbndbtb9lFWNTTBpyG4kZLTYAKQjUGm8ZEDYQ03y1M9UOdmMP9BZBOZNxQZpkV4E+sR4Rl/fPQj4/by7Gcitedc9eOtSPWoPBniGHszmmcP4m0SWJUyDEA+0u/++0bXCVQ4XSUWqFaWWULm5g1KACUqtlqZZVSyjagDV1nqtxDGB2Q973wy3BT8QdmU2fjwPqSMqzGRFrI++kB79ZqZRp6RO4veP8awquFCVj7KzzTVHjn7XPDPJpErWezr8g2j8c31kNam7bLU4Ouo+v65AOWwm4UBvdvOf1VDNiG5j/6nf//jSmyXqogZxc7k4Lg0P8Bl0hhVagAAAAAA">
                             </div>
                             <div class="content">
@@ -155,9 +163,9 @@
                             </div>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Dropdown</span>
-                        </li>
+                        </div>
                         <div class="ui selection dropdown" tabindex="0"
                             onchange="alert(`selected ${this.querySelector(`input`).value}`)"
                             style="min-width: 0; max-width: 200px;">
@@ -227,9 +235,9 @@
                             </div>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Table</span>
-                        </li>
+                        </div>
                         <div class="sixteen wide column">
                             <table class="ui celled structured table">
                                 <thead>
@@ -288,9 +296,9 @@
                             </table>
                         </div>
                         <div class="ui divider"></div>
-                        <li>
+                        <div class="not-li">
                             <span class="list-item-title">Accordion</span>
-                        </li>
+                        </div>
                         <div class="ui vertical fluid accordion menu">
                             <div class="item">
                                 <a class="title active">
@@ -369,7 +377,7 @@
                                 </div>
                             </div>
                         </div>
-                    </ul>
+                    </div>
                 </section>
             </div>
         </main>
