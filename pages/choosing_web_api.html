@@ -12,6 +12,11 @@
     <link rel="icon" href="../images/favicon.svg">
     <title>Выбор Web-API</title>
     <style>
+        @media only screen and (max-width: 550px) {
+            #main-content table {
+                font-size: 14px;
+            }
+        }
         @media only screen and (max-width: 450px) {
             #main-content table {
                 font-size: 11px;
@@ -70,6 +75,7 @@
             <div class="after-title-content">
                 <section class="text-section">
                     <h2 class="heading">Критерии выбора API</h2>
+                    <div style="display: flex; overflow: auto;">
                     <table>
                         <thead>
                             <tr>
@@ -178,6 +184,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </section>
             </div>
         </main>
