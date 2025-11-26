@@ -1,0 +1,72 @@
+.now-day-night-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.now-day-night-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.now-day-night-header {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.now-day-night-data-row {
+    display: flex;
+    gap: 10px;
+}
+
+.now-day-night-data-row-text {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.now-day-night-data-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.per-hour-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 70px;
+}
+
+.per-hour-container {
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.day-menu-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.widget-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget-header-city-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

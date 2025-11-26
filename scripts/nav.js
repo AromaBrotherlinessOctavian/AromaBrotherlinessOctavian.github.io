@@ -1,7 +1,7 @@
 var nav_xml = new DOMParser().parseFromString(
     `<?xml version="1.0" encoding="utf-8"?>
 <nav>
-    <page href="/pages/css_framework_showcase.html" title="Тест CSS-фреймворка"/>
+    <page href="/pages/web_api_usage.html" title="Применение Web-API на сайтах"/>
     <page href="/pages/index.html" title="Главная страница - Что такое API?"/>
     <page href="/pages/web_api.html" title="Web-API">
         <page href="/pages/rest.html" title="REST">
