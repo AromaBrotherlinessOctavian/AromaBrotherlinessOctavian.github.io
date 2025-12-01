@@ -69,7 +69,8 @@ function resize_handler() {
     }
 }
 
-window.addEventListener("load", () => {
+//window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#sidebar-container-new aside").innerHTML = `<div class="ui vertical menu">
         <div class="item">
             <div class="header" data-header-anchor="hdr-api">API</div>
