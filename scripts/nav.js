@@ -61,6 +61,12 @@ function breadcrumb_show(e) {
 function resize_handler() {
     const real_header_height = document.querySelector("header").getBoundingClientRect().height.toFixed(2);
     document.documentElement.style.setProperty("--current-header-height", `${(real_header_height)}px`);
+    const mq = window.matchMedia("only screen and (max-width: 768px)");
+    if (mq.matches) {
+        document.querySelector("aside div.menu")?.classList.add("huge");
+    } else {
+        document.querySelector("aside div.menu")?.classList.remove("huge");
+    }
 }
 
 window.addEventListener("load", () => {
