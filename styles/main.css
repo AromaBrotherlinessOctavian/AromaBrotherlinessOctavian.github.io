@@ -7,6 +7,8 @@
     --code-font-size: 20px;
     --link-color: #2a7fd4;
     --main-left-padding: 32px;
+    --def-header-height: 85.6px;
+    --current-header-height: var(--def-header-height);
 }
 
 @media only screen and (max-width: 992px) {
@@ -43,9 +45,7 @@ body {
     flex-direction: column;
     margin-left: 0;
     min-height: 100%;
-    min-width: calc(100% - var(--current-sidebar-width));
-    margin-left: var(--current-sidebar-width);
-    transition: margin-left 0.5s, min-width 0.5s;
+    min-width: 100%;
     z-index: 1;
 }
 
@@ -157,51 +157,6 @@ body {
     font-size: var(--normal-text-font-size);
 }
 
-#main-content:not(.uses-semanticui) table {
-    width: 100%;
-    box-shadow: 0 2px 10px #00000015;
-    text-align: left;
-    border-collapse: collapse;
-    border: 2px solid black;
-}
-
-#main-content:not(.uses-semanticui) table.fixed {
-    table-layout: fixed;
-}
-
-#main-content:not(.uses-semanticui) table.pros-cons td:nth-child(1) {
-    color: #008e00;
-}
-
-#main-content:not(.uses-semanticui) table.pros-cons td:nth-child(2) {
-    color: #c00000;
-}
-
-#main-content:not(.uses-semanticui) thead {
-    border-radius: 10px;
-    word-wrap: normal;
-}
-
-#main-content:not(.uses-semanticui) th {
-    border: 2px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    background: #defeff;
-    padding: 5px;
-}
-
-#main-content:not(.uses-semanticui) td {
-    border: 1px solid black;
-    padding: 5px;
-    word-wrap: break-word;
-}
-
-#main-content:not(.uses-semanticui) table.row-alternation tr:nth-child(2n) td {
-    border: 1px solid black;
-    background: #ececec;
-    padding: 5px;
-}
-
 #main-content a {
     color: var(--link-color);
 }
@@ -273,4 +228,21 @@ ul {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+}
+
+.code-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.code-window pre {
+    width: fit-content !important;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.code-window code {
+    width: fit-content !important;
 }

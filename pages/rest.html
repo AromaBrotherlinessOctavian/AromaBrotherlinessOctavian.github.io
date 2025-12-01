@@ -5,53 +5,43 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script src="../semantic/dist/jquery-3.1.1.min.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet">
     <script src="../scripts/nav.js"></script>
     <link rel="icon" href="../images/favicon.svg">
     <title>REST</title>
 </head>
 
 <body>
-    <header id="header-container">
-        <div id="header-content">
-            <div id="header-toggle-sidebar-bg">
-                <img id="header-toggle-sidebar-btn" class="hidden" src="../images/menu-icon.svg" alt="sidebar icon"
-                    title="Toggle sidebar">
-            </div>
-            <span id="header-site-brand">Использование API сервисов при разработке сайтов</span>
-            <img id="header-site-logo" src="../images/favicon.svg" alt="site icon" title="Site icon">
-        </div>
-        <div id="header-breadcrumbs">
-            <div class="header-nav-breadcrumbs-list">
-                <a class="header-nav-link" href="./index.html">...</a>
-                <img src="../images/chevron-right.svg" alt=">" title="Divider" class="header-nav-divider-img">
-                <a class="header-nav-link" href="./index.html">...</a>
-            </div>
-        </div>
-    </header>
-    <div id="sidebar-blur" class="hidden"></div>
-    <aside id="sidebar-container" class="hidden" data-hidden="">
-        <div id="sidebar-content">
-            <div id="sidebar-nav-list">
-                <div class="sidebar-nav-item">
-                    <div class="sidebar-nav-link-container">
-                        <div class="sidebar-nav-link-with-bg active">
-                            <a class="sidebar-nav-link active" href="./index.html">...</a>
-                        </div>
-                    </div>
+    <nav>
+        <header>
+            <div class="header-info">
+                <div>
+                    <i id="header-toggle-sidebar-btn" class="fa-solid fa-bars hidden"></i>
                 </div>
-                <div class="sidebar-nav-item">
-                    <div class="sidebar-nav-link-container">
-                        <div class="sidebar-nav-link-with-bg">
-                            <a class="sidebar-nav-link" href="./index.html">...</a>
-                        </div>
+                <div class="header-brand">
+                    <span class="header-brand-name">Использование API сервисов при разработке сайтов</span>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+            </div>
+            <div id="breadcrumb-container" style="height: 24px;">
+                <div class="ui placeholder" style="height: 16px; width: 100%;">
+                    <div class="paragraph">
+                        <div class="line"></div>
                     </div>
                 </div>
             </div>
+        </header>
+        <div class="sidebar-container" id="sidebar-container-new" data-hidden="true" style="display: none;">
+            <aside>
+            </aside>
+            <div id="sidebar-blur-new" class="sidebar-blur"></div>
         </div>
-    </aside>
+    </nav>
     <div id="body-content">
         <main id="main-content">
             <h1 class="title">REST</h1>
@@ -101,7 +91,7 @@
                 </section>
                 <section class="text-section">
                     <h2 class="heading">Оценка REST</h2>
-                    <table class="fixed pros-cons row-alternation">
+                    <table class="ui celled table">
                         <thead>
                             <tr>
                                 <th>Достоинства</th>
@@ -110,17 +100,17 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Простота</td>
-                                <td>Отсутствие состояния - иногда имеет смысл хранить состояние на сервере,
+                                <td class="positive">Простота</td>
+                                <td class="negative">Отсутствие состояния - иногда имеет смысл хранить состояние на сервере,
                                     а не постоянно таскать его с собой на клиенте</td>
                             </tr>
                             <tr>
-                                <td>Гибкость</td>
-                                <td>Иногда строгость и контроль лучше, чем гибкость</td>
+                                <td class="positive">Гибкость</td>
+                                <td class="negative">Иногда строгость и контроль лучше, чем гибкость</td>
                             </tr>
                             <tr>
-                                <td>Популярность</td>
-                                <td>Использование HTTP и архитектуры запрос-ответ
+                                <td class="positive">Популярность</td>
+                                <td class="negative">Использование HTTP и архитектуры запрос-ответ
                                     (иногда нужна прямая двухсторонняя коммуникация)</td>
                             </tr>
                         </tbody>

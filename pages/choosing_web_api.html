@@ -5,9 +5,12 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script src="../semantic/dist/jquery-3.1.1.min.js"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet">
     <script src="../scripts/nav.js"></script>
     <link rel="icon" href="../images/favicon.svg">
     <title>Выбор Web-API</title>
@@ -31,44 +34,31 @@
 </head>
 
 <body>
-    <header id="header-container">
-        <div id="header-content">
-            <div id="header-toggle-sidebar-bg">
-                <img id="header-toggle-sidebar-btn" class="hidden" src="../images/menu-icon.svg" alt="sidebar icon"
-                    title="Toggle sidebar">
-            </div>
-            <span id="header-site-brand">Использование API сервисов при разработке сайтов</span>
-            <img id="header-site-logo" src="../images/favicon.svg" alt="site icon" title="Site icon">
-        </div>
-        <div id="header-breadcrumbs">
-            <div class="header-nav-breadcrumbs-list">
-                <a class="header-nav-link" href="./index.html">...</a>
-                <img src="../images/chevron-right.svg" alt=">" title="Divider" class="header-nav-divider-img">
-                <a class="header-nav-link" href="./index.html">...</a>
-            </div>
-        </div>
-    </header>
-    <div id="sidebar-blur" class="hidden"></div>
-    <aside id="sidebar-container" class="hidden" data-hidden="">
-        <div id="sidebar-content">
-            <div id="sidebar-nav-list">
-                <div class="sidebar-nav-item">
-                    <div class="sidebar-nav-link-container">
-                        <div class="sidebar-nav-link-with-bg active">
-                            <a class="sidebar-nav-link active" href="./index.html">...</a>
-                        </div>
-                    </div>
+    <nav>
+        <header>
+            <div class="header-info">
+                <div>
+                    <i id="header-toggle-sidebar-btn" class="fa-solid fa-bars hidden"></i>
                 </div>
-                <div class="sidebar-nav-item">
-                    <div class="sidebar-nav-link-container">
-                        <div class="sidebar-nav-link-with-bg">
-                            <a class="sidebar-nav-link" href="./index.html">...</a>
-                        </div>
+                <div class="header-brand">
+                    <span class="header-brand-name">Использование API сервисов при разработке сайтов</span>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+            </div>
+            <div id="breadcrumb-container" style="height: 24px;">
+                <div class="ui placeholder" style="height: 16px; width: 100%;">
+                    <div class="paragraph">
+                        <div class="line"></div>
                     </div>
                 </div>
             </div>
+        </header>
+        <div class="sidebar-container" id="sidebar-container-new" data-hidden="true" style="display: none;">
+            <aside>
+            </aside>
+            <div id="sidebar-blur-new" class="sidebar-blur"></div>
         </div>
-    </aside>
+    </nav>
     <div id="body-content">
         <main id="main-content">
             <h1 class="title">Как выбирать Web-API</h1>
@@ -76,66 +66,63 @@
                 <section class="text-section">
                     <h2 class="heading">Критерии выбора API</h2>
                     <div style="display: flex; overflow: auto;">
-                    <table>
+                    <table class="ui celled table">
                         <thead>
                             <tr>
                                 <th>Критерий</th>
+                                <th>Тип критерия</th>
                                 <th>Описание</th>
                                 <th>Вес</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td colspan="3" style="text-align: center; background: #77f377;">Функциональные критерии
-                                    выбора API</td>
-                            </tr>
                             <tr style="background: #acffac;">
                                 <td>Соответствие задаче</td>
+                                <td>Функциональные</td>
                                 <td>Возможность осуществления поставленной задачи с помощью данного функционала</td>
                                 <td>5</td>
                             </tr>
                             <tr style="background: #acffac;">
                                 <td>Гибкость интеграции</td>
+                                <td>Функциональные</td>
                                 <td>Возможность легко встроить API в нужную систему</td>
                                 <td>5</td>
                             </tr>
                             <tr style="background: #acffac;">
                                 <td>Обширность</td>
+                                <td>Функциональные</td>
                                 <td>Возможность продолжить использовать ту же API в будущем, при расширении задачи</td>
                                 <td>3</td>
                             </tr>
-                            <tr>
-                                <td colspan="3" style="text-align: center; background: #4bf1ba;">Технические критерии
-                                    выбора API</td>
-                            </tr>
                             <tr style="background: #99ffde;">
                                 <td>Производительность</td>
+                                <td>Технические</td>
                                 <td>Быстрота реализации функционала</td>
                                 <td>4</td>
                             </tr>
                             <tr style="background: #99ffde;">
                                 <td>Надёжность</td>
+                                <td>Технические</td>
                                 <td>Доступность API влияет и на доступность самого приложения</td>
                                 <td>5</td>
                             </tr>
                             <tr style="background: #99ffde;">
                                 <td>Безопасность</td>
+                                <td>Технические</td>
                                 <td>Данные, которые сообщаются API и которые получаются от API,
                                     должны быть защищены от злоумышленников</td>
                                 <td>5</td>
                             </tr>
                             <tr style="background: #99ffde;">
                                 <td>Сообщения об ошибках</td>
+                                <td>Технические</td>
                                 <td>Если начинаются проблемы, то грамотные сообщения об ошибке помогают быстрее их
                                     устранять</td>
                                 <td>1</td>
                             </tr>
-                            <tr>
-                                <td colspan="3" style="text-align: center; background: #68b1ff;">Критерии выбора API по
-                                    удобству разработки</td>
-                            </tr>
                             <tr style="background: #9dccff;">
                                 <td>Качество документации</td>
+                                <td>Удобство разработки</td>
                                 <td>Если пользователь не сможет найти что-то в документации, ему придётся разбираться
                                     самому,
                                     лезть в исходный код (где возможно) и тратить время</td>
@@ -143,6 +130,7 @@
                             </tr>
                             <tr style="background: #9dccff;">
                                 <td>Стабильность API</td>
+                                <td>Удобство разработки</td>
                                 <td>Изменения API в идеале должны быть обратно-совместимы или использовать
                                     версионирование,
                                     чтобы не пришлось переписывать продукты, использующие эту API</td>
@@ -150,17 +138,15 @@
                             </tr>
                             <tr style="background: #9dccff;">
                                 <td>Уровень абстракции</td>
+                                <td>Удобство разработки</td>
                                 <td>Чем абстрактнее API и чем меньше она зависит от конкретных обстоятельств и
                                     технологий,
                                     тем легче интегрировать её в различные системы</td>
                                 <td>2</td>
                             </tr>
-                            <tr>
-                                <td colspan="3" style="text-align: center; background: #a568ff;">Критерии выбора API по
-                                    удобству разработки</td>
-                            </tr>
                             <tr style="background: #bd91ff;">
                                 <td>Лицензионные критерии выбора API</td>
+                                <td>Легальные</td>
                                 <td>Так как API - чей-то продукт, то и его использование разрешается в рамках некого
                                     соглашения с владельцем/оператором данного продукта.
                                     Иногда эти соглашения мешают выполнению поставленной задачи</td>
@@ -168,6 +154,7 @@
                             </tr>
                             <tr style="background: #bd91ff;">
                                 <td>Лимиты</td>
+                                <td>Легальные</td>
                                 <td>Иногда владельцы/операторы API накладывают ограничения на пользователей (например,
                                     лимиты
                                     трафика), что может мешать выполнению поставленной задачи</td>
@@ -175,6 +162,7 @@
                             </tr>
                             <tr style="background: #bd91ff;">
                                 <td>Гарантии</td>
+                                <td>Легальные</td>
                                 <td>Некоторые владельцы/операторы API могут давать некие гарантии по праву пользования
                                     API,
                                     но если этих гарантий нет, то владелец/оператор
