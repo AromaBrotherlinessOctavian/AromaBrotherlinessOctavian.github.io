@@ -91,6 +91,7 @@ const api_url = &quot;https://api.open-meteo.com/v1/forecast?latitude=55.5807297
 daily=weather_code&amp;hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code\
 &amp;current=weather_code,temperature_2m,relative_humidity_2m,wind_speed_10m\
 &amp;timezone=Europe%2FMoscow&amp;wind_speed_unit=ms&amp;temperature_unit=celsius&quot;;
+const city_name = "Москва";
 const controller = new AbortController();
 const signal = controller.signal;
 const timeoutId = setTimeout(() =&gt; controller.abort(), 5000); //5 second timeout
@@ -103,10 +104,10 @@ fetch(api_url, { signal })
         }
         return response.json();
     }).then(response =&gt; {
-        init_weather_widget(JSON.stringify(response));
+        init_weather_widget(city_name, JSON.stringify(response));
     }).catch(e =&gt; {
         console.log(e);
-        init_weather_widget(hardcoded_good_api_response);
+        init_weather_widget(city_name, hardcoded_good_api_response);
         widget_display_error(&quot;Ошибка подключения к API! Будут использованы захардкоженные данные&quot;);
     });
                             </code></pre>
